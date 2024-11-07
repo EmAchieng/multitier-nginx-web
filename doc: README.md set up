@@ -8,34 +8,6 @@ Set up a highly available, multi-tier web application with a load balancer in fr
 - A [DigitalOcean](https://www.digitalocean.com/) account.
 - A DigitalOcean API token.
 
-## Directory Structure
-multi-tier-web-app/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── terraform.tfvars
-├── modules/
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   ├── web/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   ├── lb/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   ├── db/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   ├── cache/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
-
 1. **Create a `terraform.tfvars` file:**
 
     Create a `terraform.tfvars` file in the root of your project and add the necessary variables. Here is a list of the variables you need to include:
