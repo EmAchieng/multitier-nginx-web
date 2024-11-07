@@ -1,6 +1,5 @@
-# Multi-Tier Web Application with Load Balancing
-
-Set up a highly available, multi-tier web application with a load balancer in front of multiple web servers. Configure an HTTP load balancer for secure connections, distributing traffic to a pool of web server droplets. Add a private network for communication between web and database tiers, which enhances security by keeping internal traffic isolated from public networks.
+# Multi-Tier Web Application 
+This repository contains Terraform configurations for setting up a highly available, multi-tier web application on DigitalOcean. The setup includes a load balancer, multiple web servers, a private network for secure communication, and database and cache tiers.
 
 ## Prerequisites
 
