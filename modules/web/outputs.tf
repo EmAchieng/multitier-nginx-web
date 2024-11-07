@@ -1,0 +1,3 @@
+output "web_ips" {
+  value = digitalocean_droplet.web.*.ipv4_address
+}
