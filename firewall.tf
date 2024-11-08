@@ -1,7 +1,7 @@
 resource "digitalocean_firewall" "web_firewall" {
   name = "web-firewall"
 
-  droplet_ids = flatten([module.web.*.droplet_ids])
+  droplet_ids = flatten([module.web.droplet_ids])
 
   inbound_rule {
     protocol         = "tcp"
@@ -26,4 +26,4 @@ resource "digitalocean_firewall" "web_firewall" {
     port_range       = "all"
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
-} 
+}
