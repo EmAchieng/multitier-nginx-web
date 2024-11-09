@@ -20,4 +20,11 @@ provider "digitalocean" {
 resource "digitalocean_vpc" "vpc" {
   name   = var.vpc_name
   region = var.region
+
+  lifecycle {
+    ignore_changes = [
+      name,
+      region,
+    ]
+  }
 }
