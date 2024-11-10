@@ -1,6 +1,30 @@
 # Multi-Tier Web Application 
 This repository contains Terraform configurations for setting up a highly available, multi-tier web application on DigitalOcean. It follows the multi-tier architecture model, where different layers or "tiers" are responsible for specific functionalities within the application, and each tier can scale independently. The setup includes a load balancer, web server, a private network for secure communication, and database and cache tiers.
 
+# Architecture Diagram
+
+![Architecture Diagram](images/architecture-diagram.png)
+
+### Data Flow Description
+
+1. **Internet to Load Balancer**:
+   - Users access the web application through the internet. The requests first hit the load balancer.
+
+2. **Load Balancer to VPC Network**:
+   - The load balancer distributes incoming HTTP requests to the web server(s) within the VPC (Virtual Private Cloud) network.
+
+3. **VPC Network to Web Server**:
+   - The nginx web server receives the requests from the load balancer then handles the application logic and serves the web pages.
+
+4. **Web Servers to Database**:
+   - For data storage and retrieval, the web servers communicate with the database (e.g., PostgreSQL). The database handles persistent data storage.
+
+5. **Web Servers to Cache**:
+   - To improve performance, the web server may also communicate with a cache (e.g., Redis) to store and retrieve frequently accessed data quickly.
+
+6. **Database and Cache**:
+   - The database and cache work together to ensure efficient data storage and retrieval. The cache reduces the load on the database by storing frequently accessed data in memory.
+
 ## Explanation of Multi-Tier Elements in This Setup
 
 **Network Layer (VPC):**
@@ -45,7 +69,7 @@ This repository contains Terraform configurations for setting up a highly availa
 
     - `digitalocean_token`: Your DigitalOcean API token.
     - `vpc_name`: The name of the VPC.
-    - `region`: The region where the resources will be deployed (e.g., `zrh1` for Zurich).
+    - `region`: The region where the resources will be deployed (e.g., `fra1` for Frankfurt).
     - `web_count`: The number of web server instances.
     - `web_size`: The size of the web server instances.
     - `web_image`: The image to use for the web server instances.
