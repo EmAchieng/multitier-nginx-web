@@ -124,7 +124,6 @@ This setup follows a multi-tier architecture:
 - **Network Layer**: Managed by the VPC module, which isolates and secures the resources.
 - **Application Layer**: Managed by the Web and Load Balancer modules, which handle the web servers and traffic distribution.
 - **Data Layer**: Managed by the Database and Cache modules, which handle data storage and caching.
-- **Monitoring Layer**: Managed by the Monitoring module, which ensures the health and performance of the infrastructure.
 
 ## Verify the Deployment
 
