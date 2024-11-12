@@ -36,9 +36,6 @@ This repository contains Terraform configurations for setting up a highly availa
 **Data Layer (Database and Cache):**
 - The data layer consists of a managed database instance and cache instance. The database is for persistent storage, handling data operations, while the cache improves the performance by storing frequently accessed data temporarily, reducing database load.
 
-**Monitoring Layer (Alerts):**
-- Configured alerts provide a monitoring solution for tracking the health and performance of the infrastructure. This layer helps ensure reliability and performance.
-
 ## How Multi-Tier Design Enhances This Setup
 
 **Security:**
